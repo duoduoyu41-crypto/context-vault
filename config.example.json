@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "root": null,
+  "root_auto": true,
+  "min_free_gb": 2,
+  "max_total_gb": 20,
+  "copy_raw": true,
+  "max_bytes_per_run": 4194304,
+  "rolling_max_chars": 4000,
+  "tool_result_max_chars": 8000,
+  "chunk_max_chars": 4000,
+  "keep_snapshots": false,
+  "redact": true,
+  "upload_cloud": false
+}

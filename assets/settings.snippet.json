@@ -1,0 +1,74 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CODEBUDDY_SKILL_DIR}/scripts/ctx.sh\" hook prompt-submit",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "auto|manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CODEBUDDY_SKILL_DIR}/scripts/ctx.sh\" hook pre-compact",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "auto|manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CODEBUDDY_SKILL_DIR}/scripts/ctx.sh\" hook post-compact",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CODEBUDDY_SKILL_DIR}/scripts/ctx.sh\" hook session-start",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "clear|logout|prompt_input_exit|other",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CODEBUDDY_SKILL_DIR}/scripts/ctx.sh\" hook session-end",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CODEBUDDY_SKILL_DIR}/scripts/ctx.sh\" hook stop",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
