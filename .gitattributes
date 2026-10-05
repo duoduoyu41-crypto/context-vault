@@ -1,0 +1,10 @@
+# 保证脚本在所有平台都以 LF 检出：CRLF 会让 bash 脚本直接失效
+*.sh text eol=lf
+*.py text eol=lf
+
+# 其余文本文件按平台自动转换
+* text=auto
+
+# 二进制/归档产物不参与转换
+*.zip binary
+*.jsonl binary
